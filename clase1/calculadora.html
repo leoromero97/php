@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora PHP</title>
+  <style type="text/css">
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .button {
+				background-color: #3574d293;
+        border-radius: 10px;
+				width: 220px;
+				font-size: 18px;
+				font-weight: 600;
+        color: #fff;
+				cursor: pointer;
+				text-decoration: none;
+        text-align: center;
+			} 
+			
+			.button:hover {
+			  background-color: #3835d2;
+			}
+  </style>
+</head>
+<body>
+  <h1>Calculadora PHP</h1>
+  <p>Esta página envía los datos a sumar de la variable A y la Variable B al archivo .php</p>
+  <br>
+  <h3>Ingrese dos números</h3>
+  <form name="calc" action="calculadora.php" method="POST">
+    A : <input type="text" name="a" size="10">
+    B : <input type="text" name="b" size="10">
+    <input class="button" type="submit" value="Enviar">
+  </form>
+</body>
+</html>

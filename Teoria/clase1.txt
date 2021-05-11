@@ -1,0 +1,155 @@
+# PHP en Acción
+
+PHP es un lenguaje de programación que puede hacer todo tipo de cosas: evaluar
+datos de formularios enviados desde un navegador, construir contenido web a medida
+para el navegador, hablar a una base de datos, e incluso enviar y recibir cookies
+(pequeños paquetes de datos que tu navegador usa para recordar cosas, como por
+ejemplo, si te registraste en en algún sitio ). El código PHP se escribe en <?php y ?>.
+¿Ves cómo genera números, crea listas y agrega texto directamente en tu página
+web?
+
+
+## ¿Por qué aprender PHP?
+
+"¿Para qué?" podés preguntarte. ¿Si puedo hacer eso con JavaScript?. Es verdad.
+Pero el conocimiento de JavaScript puede ser limitado.
+JavaScrip generalmente se ejecuta en el navegador, o cliente. Esto significa que solo
+sabe lo que pasa en tu navegador, además de cualquier otra información que obtenga
+de lo/s sitio/s web con los que te conectás.
+Por otra parte, PHP, se ejecuta en la misma computadora que el sitio web que estás
+visitando, que se conoce como servidor. Esto significa que tiene acceso a toda la
+información y archivos de esa máquina, que permite construir páginas HTML a
+medida para enviar a tu navegador, administrar cookies y ejecutar tareas o calcular
+
+## PHP y HTML
+El código PHP puede escribirse directamente en tu HTML, de esta forma:
+&lt;body&gt;
+&lt;p&gt;
+&lt;? php
+echo &quot;¡Estoy aprendiendo PHP!&quot;;
+?&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+
+Tu código PHP va dentro de los delimitadores&lt;?php y ?&gt;. Acá usamos la
+función echo para mostrar ¡Estoy aprendiendo PHP! También terminamos la línea con
+un punto y coma.
+
+Archivos PHP
+Quizás notaste que nuestro archivo principal ahora es index.php en lugar
+de index.html. Esto es importante. Le dice al intérprete de PHP que ahí, en el archivo,
+hay un código PHP para evaluar.
+Echo
+La función echo muestra las cadenas. Si escribís
+&lt;?php
+echo &quot;¡Hola!&quot;;
+?&gt;
+PHP mostrará ¡Hola!.
+Asegurate de terminar tu línea de PHP con un punto y coma.
+Strings (Cadenas)
+Una cadena es una palabra o frase entre citas, así: &quot;¡Hola mundo!&quot;
+Podés escribir una cadena toda de una sola vez, así:
+&lt;?php
+echo &quot;¡Hola mundo!&quot;;
+?&gt;
+O utilizar el operador de concatenación, que une varias cadenas:
+&lt;?php
+echo &quot;¡Hola,&quot; . &quot; &quot; . &quot;mundo&quot; . &quot;!&quot;;
+?&gt;
+El operador de concatenación es solo un punto (.). (Si estás aprendiendo PHP pero
+ya conocés JavaScript, te contamos que el punto hace lo mismo para las cadenas que
+el + en JavaScript)
+Aritmética
+Además de mostrar las cadenas, PHP también puede hacer operaciones
+matemáticas.
+&lt;?php
+echo 5 * 7;
+?&gt;
+Acá usamos la función echo para multiplicar 5 por 7, y terminamos nuestra línea de
+código con un punto y coma. PHP mostrará 35.
+
+Punto y coma
+Probablemente te diste cuenta de que nuestras líneas de código PHP terminan en
+punto y coma (;). PHP requiere punto y coma en cada sentencia, que es la unidad
+más corta de un código independiente. (Por ejemplo, echo &quot;¡Hola!&quot;; o 2 + 2;),
+Podés suponer que una sentencia es un pensamiento PHP completo. 19 +o echo no
+son pensamientos completos, así que no deberías poner punto y coma al final.
+&lt;?php echo &quot;¡Usá los punto y coma&quot;; ?&gt;
+Comentarios
+Así como algunas veces ponemos comentarios en nuestro lenguaje CSS (usando /*
+de esta forma */) o en nuestro lenguaje HTML (usando &lt;!-- de esta forma --&gt;),
+¡también podemos poner comentarios en nuestro código PHP! Lo hacemos usando
+dos barras (//), así:
+&lt;?php
+echo &quot;¡Estoy en pantalla!&quot;;
+// ¡Yo no! Soy un comentario.
+?&gt;
+Variables
+Hasta ahora mostramos cadenas e hicimos operaciones matemáticas en la pantalla.
+Para hacer programaciones más complejas necesitamos una forma de &quot;guardar&quot;
+estos valores. Podemos hacer esto con el uso de variables. Una variable puede
+almacenar una cadena o un número y le da, a esa cadena o número, un nombre que
+distingue entre mayúsculas y minúsculas.
+Ejemplos:
+ $miNombre = &quot;María&quot;;
+ $miEdad = 32;
+Todos los nombres de variables en PHP comienzan con el signo pesos ( $).
+
+Comparaciones
+
+Hasta ahora vimos:
+ cadenas (es decir. &quot;¡los perros ladran!&quot;)
+ numeros (es decir. 4, 10)
+Ahora aprendamos sobre operadores de comparación.
+Lista de operadores de comparación:
+• &gt; Mayor que
+• &lt; Menor que
+• &lt;= Menor que o igual a
+• &gt;= Mayor que o igual a
+• == Igual a
+• != Distinto de
+Ejemplo :
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Comparación de números&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;
+&lt;?php
+6 &lt; 7;
+?&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+Sentencias If
+Ahora vamos a ver cómo podemos usar las comparaciones para preguntar por &quot;sí&quot; o
+por &quot;no&quot;.
+Por ejemplo, si queremos escribir un programa que pregunte si tu nombre tiene más
+de 7 letras, si la respuesta es sí, podemos responder con &quot;¡Tenés un nombre largo!
+Podemos hacer esto con una sentencia if :
+Una sentencia if se forma con la palabra clave if, una condición como la que vimos antes, y un par
+de llaves { }. Si la respuesta a la condición es sí, se ejecutará el código que está dentro de las
+llaves.
+
+&lt;?php
+$edad = 17;
+if( $edad &gt; 16 ) {
+echo &quot;¡Podés manejar!&quot;;
+}
+?&gt;
+Realizar el siguiente ejemplo:
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;
+&lt;?php
+$items = 17; // Si la condición de la línea 9 es verdadera, se ejecutará el código que está entre
+las llaves.
+if($items &gt; 5) {
+echo &quot;Conseguis 10% de descuento&quot;;
+}
+?&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
