@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+input,
+select,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--white);
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+/* Formulario */
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+}
+
+.form {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 0.2rem grey;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 4rem 0.5rem;
+  width: 90%;
+}
+
+.form .group {
+  margin: 4.5rem;
+  position: relative;
+}
+
+.input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  color: grey;
+  display: block;
+  font-size: 1.8rem;
+  height: 4rem;
+  padding: 1rem 1rem 1rem 0.5rem;
+  width: 100%;
+}
+
+.input:focus {
+  color: black;
+}
+
+.label {
+  color: black;
+  font-size: 1.6rem;
+  left: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  top: 1rem;
+  transition: 0.3s ease-in-out all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  color: red;
+  font-size: 1.4rem;
+  top: -1.4rem;
+}
+
+.border {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.border::before {
+  background-color:red;
+  bottom: 0;
+  content: '';
+  height: 0.2rem;
+  left: 0;
+  position: absolute;
+  transition: 0.3s ease width;
+  width: 0%;
+}
+
+.input:focus ~ .border::before {
+  width: 100%;
+}
+
+.form-button {
+  background-color: coral;
+  color: white;
+  border-radius: 0.6rem;
+  font-size: 2rem;
+  height: 4rem;
+  margin-top: 2rem;
+  min-width: 18rem;
+}
+
+.form-button:hover {
+  background-color: rgb(190, 37, 37);
+  box-shadow: 0 0.4rem 0.4rem rgb(190, 37, 37);
+  cursor: pointer;
+}
+
+.form-title {
+  color: black;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .form {
+    width: 56%;
+  }
+
+  .input {
+    font-size: 2.2rem;
+  }
+
+  .input:focus ~ label,
+  .input:valid ~ label {
+    font-size: 1.6rem;
+  }
+
+  .label {
+    color: black;
+    font-size: 1.8rem;
+  }
+
+  .form-button {
+    font-size: 2.2rem;
+    height: 6rem;
+    width: 28rem;
+  }
+}
