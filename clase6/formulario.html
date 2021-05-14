@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo simple de login con PHP </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <div class="form_container">
+      <h1 class="title">Ingrese su nombre de usuario y su contraseña</h1>
+       <!-- Se va a procesar en login.php y se enviará por POST, no por GET-->
+      <form action="login.php" method="post" class="form">
+        <!--
+            Nota: el atributo name es importante, pues lo vamos a recibir de esa manera
+            en PHP
+        -->
+        <div class="group">
+          <input name="usuario" type="text" class="input">
+          <span class="border"></span>
+          <label for="usuario" class="label">Usuario</label>
+         </div>
+         <div class="group">
+           <input name="palabra_secreta" type="password" class="input">
+           <span class="border"></span>
+           <label for="palabra_secreta" class="label">Contraseña</label>
+         </div>
+          <br>
+          <br>
+        <!--Lo siguiente envía el formulario-->
+        <input type="submit" value="Iniciar sesión" class="button">
+      </form>
+    </div>
+
+   
+</body>
+</html>
