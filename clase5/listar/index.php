@@ -1,7 +1,7 @@
 <?php
 	require('conexion.php');
 	
-	$query="SELECT *  FROM profesores";
+	$query="SELECT * FROM profesores";
 
 	$resultado=$mysqli->query($query);
 	

@@ -71,8 +71,7 @@
     $conexion=mysqli_connect("localhost","c1950135_datosC3","doneraBU68","c1950135_datosC3") or
         die("Problemas con la conexión");
   
-    mysqli_query($conexion,"insert into profesores(nombre,apellido,tipo_documento,cuit,numero_documento,telefono,mail) values 
-                           ('$_REQUEST[nombre]','$_REQUEST[apellido]',$_REQUEST[tipo_documento],'$_REQUEST[cuit]','$_REQUEST[numero_documento]','$_REQUEST[telefono]',$_REQUEST[mail])")
+    mysqli_query($conexion,"insert into profesores(nombre,apellido,tipo_documento,cuit,numero_documento,telefono,mail) values ('$_REQUEST[nombre]','$_REQUEST[apellido]','$_REQUEST[tipo_documento]','$_REQUEST[cuit]','$_REQUEST[numero_documento]','$_REQUEST[telefono]','$_REQUEST[mail]')")
       or die("Problemas en el select".mysqli_error($conexion));
   
     mysqli_close($conexion);
