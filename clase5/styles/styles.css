@@ -2,12 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #c3c2c2;
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  color: #a0a0a0;
-  color: #d23557;
-  color: #121212;
+  background-color: #FFECEE;
+  font-family: 'Nunito', sans-serif;
+  color: #3F3D56; 
 }
 
 body {
@@ -32,43 +29,30 @@ h1 {
 }
 
 .formulario {
-  border: 2px solid black;
+  border: 2px solid #282828;
   border-radius: 10px;
-  background-color: #121212;
+  background-color: #E8F5F4;
   height: 600px;
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 0 0 10px #121212;
+  box-shadow: 0 0 10px #E8F5F4;
 }
 
 label {
-  color: #fff;
-  background-color: #121212;
+  color: #1B6E7C;
   width: 80%;
 }
 
 input {
-  border: #d23557 2px solid;
+  border: #FFA4A8 2px solid;
   border-radius: 6px;
-  background: #121212;
-  color: #fff;
+  background: #FFECEE;
+  color: #3F3D56;
   padding: 10px;
   outline-style: none;
-}
-
-.button {
-  background-color: #d235575e;
-  width: 220px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-} 
-
-.button:hover {
-  background-color: #d23557;
 }
 
 form {
@@ -79,8 +63,8 @@ form {
   height: 400px;
 }
 
-.buttonHome {
-  border: 2px solid #d23557;
+.button {
+  border: 2px solid #1B6E7C;
   border-radius: 6px;
   height: 54px;
   text-decoration: none;
@@ -91,10 +75,11 @@ form {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: #3F3D56;
 }
 
-.buttonHome:hover {
-  background-color: #d23557;
+.button:hover {
+  background-color: #1B6E7C;
   color: #c3c2c2;
   transition: .6s;
 }
@@ -105,7 +90,7 @@ a {
 
 .nav {
   font-size: 18px;
-  color: #121212;
+  color: #3F3D56;
   font-weight: 300;
 }
 
@@ -113,9 +98,17 @@ a {
   font-weight: bold;
 }
 
+.containerButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 180px;
+}
+
 @media screen and (min-width:494px) {
   .formulario {
-    width: 440px;
+    width: 480px;
   }
 
   input, label, .button {

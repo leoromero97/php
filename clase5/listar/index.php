@@ -15,10 +15,12 @@
 		  	box-sizing: border-box;
 		  	margin: 0;
 		  	padding: 0;
-		  	font-family: 'Montserrat', sans-serif;
+				font-family: 'Nunito', sans-serif;
 			}
 			
 			body {
+				background-color: #FFECEE;
+				color: #FFECEE;
 				width: 100%;
 				padding: 20px;
 				height: 100vh;
@@ -29,38 +31,48 @@
 				text-align: center;
 			}
 			
-			input {
-				border: #d23557 2px solid;
-				border-radius: 6px;
-				background: #121212;
-				color: #fff;
-				padding: 10px;
-				outline-style: none;
-			}
-				  .formulario {
-				  border: 2px solid black;
-				  border-radius: 10px;
-				  background-color: #121212;
-				  height: 600px;
-				  width: 80%;
-				  display: flex;
-				  flex-direction: column;
-				  align-items: center;
-				  justify-content: space-evenly;
-				  box-shadow: 0 0 10px #121212;
-				}
-			
 				.button {
-				  background-color: #d235575e;
-				  width: 220px;
-				  font-size: 18px;
-				  font-weight: 600;
-				  cursor: pointer;
-					text-decoration: none;
-				} 
-			
+  				border: 2px solid #1B6E7C;
+  				border-radius: 6px;
+  				height: 54px;
+  				text-decoration: none;
+  				width: 220px;
+  				font-size: 18px;
+  				font-weight: 600;
+  				display: flex;
+  				align-items: center;
+  				justify-content: center;
+  				cursor: pointer;
+  				color: #3F3D56;
+				}
+
 				.button:hover {
-				  background-color: #d23557;
+				  background-color: #1B6E7C;
+				  color: #c3c2c2;
+				  transition: .6s;
+				}
+
+				/*Cuadrado */
+				.cuadro {
+					width: 90%;
+					background: #E8F5F4;
+					padding: 25px;
+					margin: 5px auto;
+					border: 3px solid #282828;
+				}
+
+				.titulo{
+					width: 100%;
+					background: #FFECEE;
+					color: #282828;
+				}
+
+				.titulosTabla {
+				  padding: 0.5rem;
+				  background: #FFA4A8;
+				  color: #282828;
+				  text-align: center;
+				  font-size: 21px;
 				}
 			
 				/* Datagrid */
@@ -68,45 +80,28 @@
 				  border-collapse: collapse;
 				  width: 100%;
 				}
-				th, td {
+
+				th,
+				td {
 				  padding: 0.25rem;
-				  border: 1px solid #ccc;
+				  border: 1px solid #1B6E7C;
 				}
+
 				tbody tr:nth-child(odd) {
-				  background: #eee;
+				  background: #FFECEE;
 				}
-				.centro{
-				  padding: 0.5rem;
-				  background: #484848 ;
-				  color: white;
-				  text-align: center;
-				  font-size: 21px;
-				}
-			
-				#cuadro{
-					width: 90%;
-					background: #F8F8F8 ;
-					padding: 25px;
-					margin: 5px auto;
-					border: 3px solid #D8D8D8;
-				}
-			
-				#titulo{
-					width: 100%;
-					background: #282828;
-					color: white;
-				}
+
 			</style>
 			</head>
 	<body>
-	<div id="cuadro">
-		<div id="titulo">
+	<div class="cuadro">
+		<div class="titulo">
 		<center><h1>Profesores</h1></center>
 		</div>
 		
 		<table>
 			<thead>
-				<tr class="centro">
+				<tr class="titulosTabla">
 					<td>Nombre</td>
 					<td>Apellido</td>
 					<td>Tipo de documento</td>
