@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav">Inicio / <strong>Ingreso de Profesores</strong></a>
+    </nav>
+  </header>
+   <h1>Ingreso de datos de Profesores</h1>
+   <form class="formulario" action="pagina2.php" method="post">
+     <label>Ingrese Nombre:</label>
+     <input type="text" name="nombre">
+     <label>Ingrese Apellido:</label>
+     <input type="text" name="apellido">
+     <label>Ingrese Tipo de Documento:</label>
+     <input type="text" name="tipo_documento">
+     <label>Ingrese CUIT/CUIL:</label>
+     <input type="text" name="cuit">
+     <label>Ingrese Número de Documento:</label>
+     <input type="number" name="numero_documento">
+     <label>Ingrese Télefono:</label>
+     <input type="text" name="telefono">
+     <label>Ingrese Mail:</label>
+     <input type="text" name="mail">
+     <input type="submit" value="Agregar" class="button">
+  </form> 
+</body>
+</html>
