@@ -83,12 +83,14 @@
 
 				th,
 				td {
+					color: #282828;
 				  padding: 0.25rem;
 				  border: 1px solid #1B6E7C;
 				}
 
 				tbody tr:nth-child(odd) {
 				  background: #FFECEE;
+					color: #282828;
 				}
 
 			</style>
