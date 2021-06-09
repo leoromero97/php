@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcial 1 - php</title>
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container-login">
+    <div class="container-hero">
+      <h1 class="title">Registrate con nombre de usuario y contraseña</h1>
+      <p class="text">Te presentamos el nuevo sistema para conocer los datos de nuestra base de datos, 
+        para poder visualizar pacientes, médicos y obras sociales amigas.</p>
+    </div>
+      <div class="form_container">
+         <!-- Se va a procesar en login.php y se enviará por POST, no por GET-->
+        <form action="login.php" method="post" class="form">
+          <!--
+              Nota: el atributo name es importante, pues lo vamos a recibir de esa manera
+              en PHP
+          -->
+          <div class="group">
+            <input name="usuario" type="text" class="input">
+            <span class="border"></span>
+            <label for="usuario" class="label">Usuario</label>
+           </div>
+           <div class="group">
+             <input name="contrasena" type="password" class="input">
+             <span class="border"></span>
+             <label for="contrasena" class="label">Contraseña</label>
+           </div>
+            <br>
+            <br>
+          <!--Lo siguiente envía el formulario-->
+          <input type="submit" value="Iniciar sesión" class="button">
+        </form>
+    </div>
+  </div>
+</body>
+</html>
