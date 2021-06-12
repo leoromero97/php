@@ -309,11 +309,12 @@ tbody tr:nth-child(odd) {
   justify-content: center;
   text-align: center;
   background: #F4FFF9;
-  color: #1BBA6E;
+  color: #09522e;
   cursor: pointer;
   border-radius: 1.2rem;
   font-size: 2rem;
   font-weight: 800;
+  margin-top: 2rem;
   min-height: 4rem;
   min-width: 22rem;
   transition: color 0.25s cubic-bezier(.7, 0, .9, 1);
