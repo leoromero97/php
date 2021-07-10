@@ -1,0 +1,30 @@
+.dashboard_contenedor {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0.5rem;
+  width: 100%;
+}
+
+.dashboard_contenedor_cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 678px) {
+  .dashboard_contenedor_cards {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .dashboard_contenedor_cards {
+    max-width: 800px;
+  }
+}
