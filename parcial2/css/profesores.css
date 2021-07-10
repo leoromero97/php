@@ -1,0 +1,30 @@
+.tituloTabla {
+  align-self: center;
+  text-align: center;
+  color: #E2FAFF;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.textoTabla {
+  color: #E2FAFF;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contenedorTablaProfesores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.tableProfesores {
+  display: flex;
+  width: 90%;
+}
+
+#buscador,
+#buscadorAlumnos {
+  padding-right: 3rem;
+}

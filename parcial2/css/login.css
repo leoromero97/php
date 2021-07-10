@@ -1,0 +1,125 @@
+.login_contenedor_padre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem 0.4rem;
+  width: 100%;
+}
+
+.login_contenedor {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#1F2328, #1B1A1D);
+  border-radius: 12px;
+  box-shadow: 0 0.1rem 0.2rem #47daf788;
+  padding: 2rem 0;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login_contenedor_formulario {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.login_titulo {
+  margin-bottom: 1.8rem;
+}
+
+.formularioLogin {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.formulario-grupoLogin {
+  margin: 2rem 1rem;
+  position: relative;
+}
+
+.formulario-grupoLogin:nth-child(2) {
+  margin: 2rem 1rem 6rem;
+}
+
+.inputLogin {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #E2FAFF;
+  color: #E2FAFF;
+  display: block;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 1rem 1rem 1rem 0.5rem;
+  width: 100%;
+}
+
+.inputLogin:focus {
+  color: #369DF8;
+}
+
+.labelLogin {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  left: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  top: -1rem;
+  transition: 0.3s ease-in-out all;
+}
+
+.inputLogin:focus ~ .labelLogin {
+  color: #E2FAFF;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.linea-inputLogin {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.linea-inputLogin::before {
+  background: #369DF8;
+  bottom: 0;
+  content: '';
+  height: 0.1rem;
+  left: 0;
+  position: absolute;
+  transition: 0.3s ease width;
+  width: 0%;
+}
+
+.inputLogin:focus ~ .linea-inputLogin::before {
+  width: 100%;
+}
+
+@media screen and (min-width: 496px) {
+  .login_contenedor_padre {
+    padding: 2rem 2rem;
+  }
+
+  .login_contenedor {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .login_contenedor {
+    max-width: 740px;
+  }
+
+  .login_titulo {
+    margin-bottom: 6rem;
+    max-width: 500px;
+  }
+}
+
+
