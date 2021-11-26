@@ -1,0 +1,32 @@
+.welcome_contenedor_padre {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#E7F5FF, #FFFFFF);
+  justify-content: center;
+  padding: 2rem 0.5rem;
+  width: 100%;
+}
+
+.welcome_contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.welcome_texto {
+  text-align: center;
+  margin-bottom: 3.4rem;
+}
+
+@media screen and (min-width: 678px) {
+  .welcome_contenedor_padre {
+    height: 100vh;
+  }
+
+  .welcome_texto {
+    margin-bottom: 6rem;
+  }
+}

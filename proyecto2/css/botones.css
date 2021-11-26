@@ -1,0 +1,81 @@
+.boton-primario,
+.boton-secundario,
+.boton-terciario,
+.boton-chico-primario,
+.boton-chico-terciario  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #04498F;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.8rem 2.6rem;
+  transition: color 0.25s cubic-bezier(.7, 0, .9, 1);
+  -webkit-transition: color 0.25s cubic-bezier(.7, 0, .9, 1);
+  -moz-transition: color 0.25s cubic-bezier(.7, 0, .9, 1);
+  -ms-transition: color 0.25s cubic-bezier(.7, 0, .9, 1);
+  -o-transition: color 0.25s cubic-bezier(.7, 0, .9, 1);
+}
+
+.boton-secundario {
+  background-color: #E7F5FF;
+  color: #04498F;
+}
+
+.boton-terciario {
+  background-color: #FFFFFF;
+  color: #04498F;
+}
+
+.boton-chico-primario {
+  font-size: 0.5rem;
+  font-weight: 800;
+  padding: 0.4rem 1.2rem;
+}
+
+.boton-chico-terciario {
+  background-color: #FFFFFF;
+  color: #04498F;
+  font-size: 0.5rem;
+  font-weight: 800;
+  padding: 0.4rem 1.2rem;
+}
+
+.texto-botton-primario {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.texto-botton-secundario {
+  color: #04498F;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 678px) {
+  .boton-primario,
+  .boton-secundario,
+  .boton-terciario {
+    padding: 0.8rem 5rem;
+  }
+
+  .boton-primario:hover {
+    background-color: #0F0A83;
+    box-shadow: 0 0.4rem 0.2rem #044A8F33;
+  }
+  
+  .boton-secundario:hover {
+    border: 1px solid #04498F;
+    box-shadow: 0 0.4rem 0.2rem #044A8F33;
+  }
+
+  .boton-terciario:hover {
+    background-color: #E7F5FF;
+    border: 1px solid #04498F;
+  }
+}

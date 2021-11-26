@@ -42,8 +42,6 @@
 	</div>
 
 	<!-- Modal para registros nuevos -->
-
-
 <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
