@@ -10,6 +10,8 @@ include("conexion.php");
 	<title>Datos del profesor</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
+	<link href="css/aligns.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -67,9 +69,18 @@ include("conexion.php");
 				</tr>
 			</table>
 			
-			<a href="verProfesor.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-			<a href="editProfesor.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Editar datos</a>
-			<a href="profileProfesor.php?aksi=delete&id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Esta seguro de borrar los datos <?php echo $row['nombre']; ?>')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar</a>
+			<a href="verProfesor.php" class="btn btn-secondary center">
+			<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
+				Volver
+			</a>
+			<a href="editProfesor.php?id=<?php echo $row['id']; ?>" class="btn btn-primary center">
+				<img src="img/ic_edit.svg" alt="Editar icono" class="mr-4" />
+				Editar datos
+			</a>
+			<a href="profileProfesor.php?aksi=delete&id=<?php echo $row['id']; ?>" class="btn btn-danger center" onclick="return confirm('¿Estás seguro de borrar los datos de <?php echo $row['nombre']; ?> ?')">
+				<img src="img/ic_trash.svg" alt="Eliminar icono" class="mr-4" />
+				Eliminar
+			</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -10,6 +10,8 @@ include("conexion.php");
 	<title>Notas del alumno</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
+	<link href="css/aligns.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -42,7 +44,7 @@ include("conexion.php");
 			}
 			?>
 <div class="content">
-			<h2>Notas</h2>
+			<h2>Notas de <?php echo $row['nombre']; ?></h2>
 			<hr />
 
 			<?php
@@ -67,18 +69,18 @@ include("conexion.php");
 				<div class="form-group">
 					<input name="buscar" class="form-control" placeholder="Ingrese id de materia">
 					<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
-					<input type="submit" class="btn btn-sm btn-primary" value="Buscar">
+					<input type="submit" class="btn btn-primary" value="Buscar">
 				</div>
 			</form>
 			<br />
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
 				<tr>
-                    <th>Id Alumno</th>
+					<th>Id Alumno</th>
 					<th>Id Curso</th>
 					<th>Materia</th>
 					<th>Fecha</th>
-                    <th>Nota</th>
+          <th>Nota</th>
 				</tr>
 				<?php
 				if($buscar){
@@ -99,7 +101,7 @@ include("conexion.php");
 							<td>'.$row['curso'].'</td>
 							<td>'.$row['materia'].'</td>
 							<td>'.$row['fecha'].'</td>
-                            <td>'.$row['nota'].'</td>
+              <td>'.$row['nota'].'</td>
 						</tr>';
 						$no++;
 					}
@@ -109,10 +111,10 @@ include("conexion.php");
 			</table>
 			</div>
 		</div>
-
-			<a href="verAlumnos.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-
-			
+			<a href="verCursos.php" class="btn btn-secondary center">
+				<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
+				Volver a cursos
+			</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

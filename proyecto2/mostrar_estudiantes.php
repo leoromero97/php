@@ -7,7 +7,7 @@ $estudiantes = Estudiante::obtener();
 <div class="row">
     <div class="col-12">
         <h1>Listado de estudiantes</h1>
-        <a href="formulario_registro_estudiante.php" class="btn btn-info my-2">Nuevo</a>
+        <a href="formulario_registro_estudiante.php" class="btn btn-secondary my-2">Nuevo</a>
     </div>
     <div class="col-12 table-responsive">
         <table class="table table-bordered">
@@ -26,7 +26,7 @@ $estudiantes = Estudiante::obtener();
                         <td><?php echo $estudiante["nombre"] ?></td>
                         <td><?php echo $estudiante["apellido"] ?></td>
                         <td>
-                            <a href="notas_estudiante.php?id=<?php echo $estudiante["id"] ?>" class="btn btn-info">
+                            <a href="notas_estudiante.php?id=<?php echo $estudiante["id"] ?>" class="btn btn-secondary">
                                 Notas
                             </a>
                         </td>
@@ -36,7 +36,7 @@ $estudiantes = Estudiante::obtener();
                             </a>
                         </td>
                         <td>
-                            <a href="eliminar_estudiante.php?id=<?php echo $estudiante["id"] ?>" class="btn btn-danger">
+                            <a href="eliminar_estudiante.php?id=<?php echo $estudiante["id"] ?>" class="btn btn-secondary">
                                 Eliminar
                             </a>
                         </td>

@@ -11,6 +11,8 @@ include("conexion.php");
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
+	<link href="css/aligns.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -118,8 +120,12 @@ include("conexion.php");
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<a href="verCursos.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-						<input type="submit" name="save" class="btn btn-sm btn-success" value="Guardar datos">
+						<a href="altaNotas.php" class="btn btn-secondary center">
+							<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
+							Volver a notas
+						</a>
+						<input type="submit" name="save" class="btn btn-primary" value="Guardar datos">
+						<a href="dashboard.php" class="btn btn-tertiary">Cancelar</a>
 					</div>
 				</div>
 			</form>

@@ -3,14 +3,14 @@
 .boton-terciario,
 .boton-chico-primario,
 .boton-chico-terciario  {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   background-color: #04498F;
   color: #FFFFFF;
-  cursor: pointer;
   border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-size: 1rem;
   font-weight: 800;
   padding: 0.8rem 2.6rem;
@@ -76,6 +76,5 @@
 
   .boton-terciario:hover {
     background-color: #E7F5FF;
-    border: 1px solid #04498F;
   }
 }

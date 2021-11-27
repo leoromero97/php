@@ -10,6 +10,8 @@ include("conexion.php");
 	<title>Datos del alumno</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
+	<link href="css/aligns.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -72,8 +74,14 @@ include("conexion.php");
 				
 			</table>
 			
-			<a href="verAlumnos.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-			<a href="editAlumnoNota.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Calificar</a>
+			<a href="altaNotas.php" class="btn btn-secondary center">
+				<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
+				Volver a notas
+			</a>
+			<a href="editAlumnoNota.php?id=<?php echo $row['id']; ?>" class="btn btn-primary center">
+				<img src="img/ic_edit.svg" alt="Editar icono" class="mr-4" />
+				Calificar
+			</a>
 			
 		</div>
 	</div>

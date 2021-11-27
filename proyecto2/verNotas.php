@@ -24,7 +24,7 @@ include("conexion.php");
 		<div class="content">
 			<h2>Cursos</h2>
 			<hr />
-
+			<p>Seleccione el curso donde desea ver las notas</p>
 			<?php
 			if(isset($_GET['aksi']) == 'delete'){
 				// escaping, additionally removing everything that could be (html/javascript-) code
@@ -47,7 +47,7 @@ include("conexion.php");
 				<div class="form-group">
 					<input name="buscar" class="form-control" placeholder="Ingrese el nombre del curso">
 					<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
-					<input type="submit" class="btn btn-sm btn-primary" value="Buscar">
+					<input type="submit" class="btn btn-primary" value="Buscar">
 				</div>
 			</form>
 			<br />
