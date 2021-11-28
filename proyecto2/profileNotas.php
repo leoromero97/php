@@ -55,9 +55,9 @@ include("conexion.php");
 				</tr>
 			</table>
 			
-			<a href="verCursos.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-			<a href="editCurso.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Editar datos</a>
-			<a href="profileCurso.php?aksi=delete&id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Esta seguro de borrar los datos <?php echo $row['curso']; ?>')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar</a>
+			<a href="verCursos.php" class="btn btn-secondary"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
+			<a href="editCurso.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Editar datos</a>
+			<a href="profileCurso.php?aksi=delete&id=<?php echo $row['id']; ?>" class="btn btn-secondary" onclick="return confirm('Esta seguro de borrar los datos <?php echo $row['curso']; ?>')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

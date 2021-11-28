@@ -11,6 +11,8 @@ include("conexion.php");
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
+	<link href="css/aligns.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -82,15 +84,14 @@ include("conexion.php");
 					<input type="text" name="idcurso" value="<?php echo $row ['idcurso']; ?>" class="form-control" placeholder="Id Curso" required>
 					</div>
 				</div>
-				
-				
-				
-				
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<a href="verAlumnos.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-						<input type="submit" name="save" class="btn btn-sm btn-success" value="Guardar datos">
+						<a href="verAlumnos.php" class="btn btn-secondary center">
+							<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
+							Volver
+						</a>
+						<input type="submit" name="save" class="btn btn-primary" value="Guardar datos">
 					</div>
 				</div>
 			</form>

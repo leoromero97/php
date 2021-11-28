@@ -79,8 +79,8 @@ include("conexion.php");
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<input type="submit" name="add" class="btn btn-sm btn-primary" value="Registrar profesor">
-						<a href="dashboard.php" class="btn btn-sm btn-danger">Cancelar</a>
+						<input type="submit" name="add" class="btn btn-primary" value="Registrar profesor">
+						<a href="dashboard.php" class="btn btn-tertiary">Cancelar</a>
 					</div>
 				</div>
 			</form>

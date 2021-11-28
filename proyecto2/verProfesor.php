@@ -47,7 +47,7 @@ include("conexion.php");
 				<div class="form-group">
 					<input name="buscar" class="form-control" placeholder="Ingrese apellido del profesor">
 					<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
-					<input type="submit" class="btn btn-sm btn-primary" value="Buscar">
+					<input type="submit" class="btn btn-primary" value="Buscar">
 				</div>
 			</form>
 			<br />

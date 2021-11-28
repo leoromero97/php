@@ -68,6 +68,10 @@ include("conexion.php");
         <img src="./img/ic_notas.png" alt="Notas" class="icono-card1">
         <p class="texto-card1">Ver Notas</p> 
       </a>
+      <a href="altaNotas.php" class="card1 margen-inferior1">
+        <img src="./img/ic_notas.png" alt="Notas" class="icono-card1">
+        <p class="texto-card1">Altas Notas</p> 
+      </a>
     </div>
   </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

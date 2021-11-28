@@ -67,6 +67,8 @@ html {
   color: #0F0A83;
   font-size: 0.8rem;
   font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
 }
 
 .card1 {
@@ -79,6 +81,8 @@ html {
   border-radius: 12px;
   box-shadow: 0 0.2rem 0.2rem #044A8F33;
   transition: all .3s ease-out;
+  text-decoration: none;
+  text-transform: none;
 }
 
 .buscador_contenedor {

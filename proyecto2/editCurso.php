@@ -57,8 +57,8 @@ include("conexion.php");
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<a href="verCursos.php" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
-						<input type="submit" name="save" class="btn btn-sm btn-success" value="Guardar datos">
+						<a href="verCursos.php" class="btn btn-secondary"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>Volver</a>
+						<input type="submit" name="save" class="btn btn-primary" value="Guardar datos">
 					</div>
 				</div>
 			</form>
