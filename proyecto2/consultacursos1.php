@@ -3,7 +3,7 @@
 <HEAD>
    <TITLE>Consulta de noticias</TITLE>
    <LINK REL="stylesheet" TYPE="text/css" HREF="estilo.css">
-
+   <link href="css/components.css" rel="stylesheet">
 <SCRIPT LANGUAGE='JavaScript'>
 <!--
 // Funci�n que actualiza la p�gina al cambiar la categor�a de noticia
