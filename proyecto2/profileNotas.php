@@ -9,7 +9,7 @@ include("conexion.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Datos del alumno</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;

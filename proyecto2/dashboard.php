@@ -6,7 +6,7 @@ include("conexion.php");
 <head>
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
 
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -10,7 +10,7 @@ include("conexion.php");
 	<title>Datos del profesor</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
 	<style>

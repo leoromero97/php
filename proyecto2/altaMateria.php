@@ -10,7 +10,7 @@ include("conexion.php");
 	<title>Alta de Materia</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/components.css" rel="stylesheet">
 	<style>
 		.content {
