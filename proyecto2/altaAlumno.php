@@ -11,6 +11,7 @@ include("conexion.php");
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -79,18 +80,21 @@ include("conexion.php");
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Curso</label>
 					<div class="col-sm-4">
-						<select name = "cursos">
-							<option value="0">Seleccione</option>
-							<?php
-							$mysqli = new mysqli('localhost', 'c1341491_prueba', 'zo54seLUka', 'c1341491_prueba');
-							?>
-							<?php
-							$query = $mysqli -> query ("SELECT * FROM cursos");
-							while ($valores = mysqli_fetch_array($query)) {
-								echo '<option value="'.$valores[id].'">'.$valores[curso].'</option>';
-							}
-							?>
-						</select>
+						<div class="content-select">
+							<select name = "cursos" class="select">
+								<option value="0">Seleccione</option>
+								<?php
+								$mysqli = new mysqli('localhost', 'c1341491_prueba', 'zo54seLUka', 'c1341491_prueba');
+								?>
+								<?php
+								$query = $mysqli -> query ("SELECT * FROM cursos");
+								while ($valores = mysqli_fetch_array($query)) {
+									echo '<option value="'.$valores[id].'">'.$valores[curso].'</option>';
+								}
+								?>
+							</select>
+							<span></span>
+						</div>
 					</div>
 				</div>
 

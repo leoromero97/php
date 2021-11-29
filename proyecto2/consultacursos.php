@@ -1,58 +1,51 @@
-<HTML LANG="es">
+<html lang="es">
+   <head>
+      <title>Consulta de noticias</title>
+      <link href="estilo.css" rel="stylesheet" type="text/css">
+      <link href="css/components.css" rel="stylesheet" type="text/css">
+      <?PHP
+         // Incluir bibliotecas de funciones
+         include ("lib/fecha.php");
+      ?>
+   </head>
+   <body>
+      <hi>Consulta de Cursos</hi>
+      <form NAME="selecciona" ACTION="consultacursos.php" METHOD="POST">
+         <p>Mostrar materias del curso:</p>
+         <div   div class="content-select">
+            <select name = "categoria" class="select">
+	         	<option value="0">Seleccione</option>
+	         		<?php
+	         		$mysqli = new mysqli('localhost', 'c1341491_prueba', 'zo54seLUka', 'c1341491_prueba');
+	         		?>
+	         		<?php
+	         		$query = $mysqli -> query ("SELECT * FROM cursos");
+	         		while ($valores = mysqli_fetch_array($query)) {
+	         			echo '<option value="'.$valores[id].'">'.$valores[curso].'</option>';
+	         		}
+	         		?>
+	         </select>
+            <span></span>
+         </div>
+         <input TYPE="submit" NAME="actualizar" VALUE="Actualizar">
+      </form>
+      <?PHP
+         // Conectar con el servidor de base de datos
+         $conexion = mysql_connect ("localhost", "c1341491_prueba", "zo54seLUka")
+         or die ("No se puede conectar con el servidor");
+         // Seleccionar base de datos
+         mysql_select_db ("c1341491_prueba")
+            or die ("No se puede seleccionar la base de datos");
+         // Enviar consulta
+         $instruccion = "select * from materias inner join cursos";
+         $actualizar = $_REQUEST['actualizar'];
+         $categoria = $_REQUEST['categoria'];
+         if (isset($actualizar) && $categoria != "0")
+            $instruccion = $instruccion . " where idcurso='$categoria'";
 
-<HEAD>
-   <TITLE>Consulta de noticias</TITLE>
-   <LINK REL="stylesheet" TYPE="text/css" HREF="estilo.css">
-
-<?PHP
-// Incluir bibliotecas de funciones
-   include ("lib/fecha.php");
-?>
-
-</HEAD>
-
-<BODY>
-
-<H1>Consulta de Cursos</H1>
-
-<FORM NAME="selecciona" ACTION="consultacursos.php" METHOD="POST">
-<P>Mostrar materias del curso:
-<select name = "categoria">
-							<option value="0">Seleccione</option>
-							<?php
-							$mysqli = new mysqli('localhost', 'c1341491_prueba', 'zo54seLUka', 'c1341491_prueba');
-							?>
-							<?php
-							$query = $mysqli -> query ("SELECT * FROM cursos");
-							while ($valores = mysqli_fetch_array($query)) {
-								echo '<option value="'.$valores[id].'">'.$valores[curso].'</option>';
-							}
-							?>
-						</select>
-<INPUT TYPE="submit" NAME="actualizar" VALUE="Actualizar"></P>
-</FORM>
-
-<?PHP
-
-   // Conectar con el servidor de base de datos
-   $conexion = mysql_connect ("localhost", "c1341491_prueba", "zo54seLUka")
-   or die ("No se puede conectar con el servidor");
-
-   // Seleccionar base de datos
-      mysql_select_db ("c1341491_prueba")
-         or die ("No se puede seleccionar la base de datos");
-
-   // Enviar consulta
-      $instruccion = "select * from materias inner join cursos";
-
-      $actualizar = $_REQUEST['actualizar'];
-      $categoria = $_REQUEST['categoria'];
-      if (isset($actualizar) && $categoria != "0")
-         $instruccion = $instruccion . " where idcurso='$categoria'";
-
-      $instruccion = $instruccion . "order by idcurso desc";
-      $consulta = mysql_query ($instruccion, $conexion)
-         or die ("Fallo en la consulta");
+         $instruccion = $instruccion . "order by idcurso desc";
+         $consulta = mysql_query ($instruccion, $conexion)
+            or die ("Fallo en la consulta");
 
    // Mostrar resultados de la consulta
       $nfilas = mysql_num_rows ($consulta);
@@ -84,10 +77,9 @@
       else
          print ("No hay materias disponibles para ese curso");
 
-// Cerrar conexi�n
+   // Cerrar conexi�n
    mysql_close ($conexion);
+   ?>
 
-?>
-
-</BODY>
-</HTML>
+   </body>
+</html>

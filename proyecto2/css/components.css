@@ -1,0 +1,48 @@
+.content-select{
+	max-width: 200px;
+	position: relative;
+}
+ 
+.content-select select:hover{
+	background: #E7F5FF;
+}
+
+.content-select span{
+	position: absolute;
+  right: calc(17%);
+  top: calc(24%);
+  width: 12px;
+  height: 12px;
+	display: block;
+	border-left: 4px solid #04498F;
+	border-bottom: 4px solid #04498F;
+	transform: rotate(-45deg);
+	transition: all 0.25s ease;
+}
+
+.select {
+  appearance: none;
+	border: 1px solid #CCC;
+  border-radius: 12px;
+	background: #E7F5FF;
+  background-repeat: no-repeat;
+  background-position: right center;
+	color: #555;;
+	cursor: pointer;
+	font-size: 1em;
+  max-height: 42px;
+  padding: 0.6rem 1.2rem;
+  position: relative;
+  max-width: 200px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  display: inline-block;
+	width: 100%;
+  outline: 0; 
+  transition: all 0.25s ease;
+}
+
+.select::-ms-expand {
+  display: none;
+}

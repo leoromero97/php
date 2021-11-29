@@ -13,6 +13,7 @@ include("conexion.php");
 	<link href="css/style_nav.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -62,50 +63,52 @@ include("conexion.php");
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Apellido</label>
 					<div class="col-sm-4">
-						<input type="text" name="apellido" value="<?php echo $row ['apellido']; ?>" class="form-control" placeholder="Apellido" required>
+						<input type="text" name="apellido" value="<?php echo $row ['apellido']; ?>" class="form-control" placeholder="Apellido" disabled>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Nombre</label>
 					<div class="col-sm-4">
-						<input type="text" name="nombre" value="<?php echo $row ['nombre']; ?>" class="form-control" placeholder="Nombre" required>
+						<input type="text" name="nombre" value="<?php echo $row ['nombre']; ?>" class="form-control" placeholder="Nombre" disabled>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">Dni</label>
+					<label class="col-sm-3 control-label">DNI</label>
 					<div class="col-sm-4">
-						<input type="text" name="dni" value="<?php echo $row ['dni']; ?>" class="form-control" placeholder="Dni" required>
+						<input type="text" name="dni" value="<?php echo $row ['dni']; ?>" class="form-control" placeholder="DNI" disabled>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Telefono</label>
 					<div class="col-sm-3">
-					<input type="text" name="telefono" value="<?php echo $row ['telefono']; ?>" class="form-control" placeholder="Telefono" required>
+					<input type="text" name="telefono" value="<?php echo $row ['telefono']; ?>" class="form-control" placeholder="Telefono" disabled>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Id Curso</label>
 					<div class="col-sm-3">
-					<input type="text" name="idcurso" value="<?php echo $row ['idcurso']; ?>" class="form-control" placeholder="Id Curso" required>
+					<input type="text" name="idcurso" value="<?php echo $row ['idcurso']; ?>" class="form-control" placeholder="Id Curso" disabled>
 					<?php $idcurso=$row['idcurso']; ?>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Materias</label>
 					<div class="col-sm-4">
-						<select name = "materias">
-							<option value="0">Seleccione</option>
-							<?php
-							$mysqli = new mysqli('localhost', 'c1341491_prueba', 'zo54seLUka', 'c1341491_prueba');
-							?>
-							<?php
-							
-							$query = $mysqli -> query ("SELECT * FROM materias where idcursos = $idcurso ");
-							while ($valores = mysqli_fetch_array($query)) {
-								echo '<option value="'.$valores[id].'">'.$valores[materia].'</option>';
-							}
-							?>
-						</select>
+						<div class="content-select">
+							<select name = "materias" class="select">
+								<option value="0">Seleccione</option>
+									<?php
+									$mysqli = new mysqli('localhost', 'c1341491_prueba', 'zo54seLUka', 'c1341491_prueba');
+									?>
+									<?php
+									$query = $mysqli -> query ("SELECT * FROM materias where idcursos = $idcurso ");
+									while ($valores = mysqli_fetch_array($query)) {
+										echo '<option value="'.$valores[id].'">'.$valores[materia].'</option>';
+									}
+									?>
+							</select>
+							<span></span>
+						</div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -114,9 +117,6 @@ include("conexion.php");
 						<input type="text" name="nota" class="form-control" placeholder="Notas" required>
 					</div>
 				</div>
-				
-				
-				
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
@@ -125,7 +125,9 @@ include("conexion.php");
 							Volver a notas
 						</a>
 						<input type="submit" name="save" class="btn btn-primary" value="Guardar datos">
-						<a href="dashboard.php" class="btn btn-tertiary">Cancelar</a>
+						<a href="dashboard.php" class="btn btn-tertiary">
+							Cancelar
+						</a>
 					</div>
 				</div>
 			</form>
