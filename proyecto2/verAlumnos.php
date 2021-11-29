@@ -7,9 +7,16 @@ include("conexion.php");
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Vista de alumnos</title>
+	<meta name="description" content="Registro de Calificaciones de Alumnos - ICO">
+	<meta name="keywords" content="Sistema | Registro | Alumnos | Calificaciones">
+  <meta name="author" content="Leonardo G. Romero - Nahuel Pastene - Matias Loviscovo - Leonardo Martínez">
+	<link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+	<title>RCA - ICO | Vista de alumnos</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;
@@ -22,7 +29,7 @@ include("conexion.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h2>Alumnos</h2>
+			<h1 class="titulo1">Alumnos</h1>
 			<hr />
 
 			<?php
@@ -42,7 +49,6 @@ include("conexion.php");
 				}
 			}
 			?>
-
 			<form class="form-inline" method="get">
 				<div class="form-group">
 					<input name="buscar" class="form-control" placeholder="Ingrese apellido del alumno">
@@ -52,43 +58,42 @@ include("conexion.php");
 			</form>
 			<br />
 			<div class="table-responsive">
-			<table class="table table-striped table-hover">
-				<tr>
-                    <th>ID</th>
-					<th>Curso</th>
-					<th>Apellido</th>
-					<th>Nombre</th>
-                    <th>Dni</th>
-                    <th>Telefono</th>
-				</tr>
-				<?php
-				if($buscar){
-					$sql = mysqli_query($con, "SELECT * FROM alumnos WHERE apellido LIKE '%$buscar%' ORDER BY id ASC");
-				}else{
-					//$sql = mysqli_query($con, "select alumnos.*,cursos.* from alumnos,cursos where alumnos.idcurso = cursos.id");
-					$sql = mysqli_query($con, "SELECT * FROM alumnos ORDER BY id ASC");
-				}
-
-				if(mysqli_num_rows($sql) == 0){
-					echo '<tr><td colspan="8">No hay datos.</td></tr>';
-				}else{
-					$no = 1;
-					while($row = mysqli_fetch_assoc($sql)){
-						echo '
-						<tr>
-							<td><a href="profileAlumno.php?id='.$row['id'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.$row['id'].'</a></td>
-							<td>'.$row['idcurso'].'</td>
-							<td>'.$row['apellido'].'</td>
-							<td>'.$row['nombre'].'</td>
-                            <td>'.$row['dni'].'</td>
-							<td>'.$row['telefono'].'</td>
-							
-						</tr>';
-						$no++;
+				<table class="table table-striped table-hover">
+					<tr>
+						<th>ID</th>
+						<th>Curso</th>
+						<th>Apellido</th>
+						<th>Nombre</th>
+      	    <th>Dni</th>
+      	    <th>Telefono</th>
+					</tr>
+					<?php
+					if($buscar){
+						$sql = mysqli_query($con, "SELECT * FROM alumnos WHERE apellido LIKE '%$buscar%' ORDER BY id ASC");
+					}else{
+						//$sql = mysqli_query($con, "select alumnos.*,cursos.* from alumnos,cursos where alumnos.idcurso = cursos.id");
+						$sql = mysqli_query($con, "SELECT * FROM alumnos ORDER BY id ASC");
 					}
-				}
-				?>
-			</table>
+
+					if(mysqli_num_rows($sql) == 0){
+						echo '<tr><td colspan="8">No hay datos.</td></tr>';
+					}else{
+						$no = 1;
+						while($row = mysqli_fetch_assoc($sql)){
+							echo '
+							<tr>
+								<td><a href="profileAlumno.php?id='.$row['id'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.$row['id'].'</a></td>
+								<td>'.$row['idcurso'].'</td>
+								<td>'.$row['apellido'].'</td>
+								<td>'.$row['nombre'].'</td>
+								<td>'.$row['dni'].'</td>
+								<td>'.$row['telefono'].'</td>
+							</tr>';
+							$no++;
+						}
+					}
+					?>
+				</table>
 			</div>
 		</div>
 	</div>

@@ -7,12 +7,19 @@ include("conexion.php");
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Datos de la materia</title>
+	<meta name="description" content="Registro de Calificaciones de Alumnos - ICO">
+	<meta name="keywords" content="Sistema | Registro | Alumnos | Calificaciones">
+  <meta name="author" content="Leonardo G. Romero - Nahuel Pastene - Matias Loviscovo - Leonardo Martínez">
+	<link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+	<title>RCA - ICO | Datos de la materia</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	<style>
 		.content {
 			margin-top: 80px;

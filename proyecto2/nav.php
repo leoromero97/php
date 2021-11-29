@@ -1,12 +1,14 @@
 	<div class="container">
 			<div class="navbar-header">
+				<a href="dashboard.php" class="logo-navbar">
+					<img src="img/logo.svg" alt="Icono Instituto Cristo Obrero" title="Icono Instituto Cristo Obrero" class="logo-icon">
+				</a>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand visible-xs-block visible-sm-block" href="">Inicio</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav ">

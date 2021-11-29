@@ -4,10 +4,6 @@ include("conexion.php");
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style_nav.css" rel="stylesheet">
-
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Registro de Calificaciones de Alumnos - ICO">
@@ -15,9 +11,11 @@ include("conexion.php");
   <meta name="author" content="Leonardo G. Romero - Nahuel Pastene - Matias Loviscovo - Leonardo Martínez">
   <meta property="og:type" content="Website">
   <meta content="modificar con el link" property="og:url">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="shortcut icon" href="./img/icono.png" type="image/x-icon">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
   <title>RCA - ICO</title>
+  <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
