@@ -88,7 +88,9 @@
 
 .dropdown-menu {
   background: #0F0A83;
+  border-radius: 6px;
   padding: 0.2rem;
+  padding-left: 0.4rem;
 }
 
 .dropdown-item:hover {

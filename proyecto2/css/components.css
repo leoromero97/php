@@ -23,7 +23,7 @@
 .select {
   appearance: none;
 	border: 1px solid #CCC;
-  border-radius: 12px;
+  border-radius: 6px;
 	background: #E7F5FF;
   background-repeat: no-repeat;
   background-position: right center;
@@ -45,4 +45,8 @@
 
 .select::-ms-expand {
   display: none;
+}
+
+.form-control {
+  border-radius: 6px;
 }
