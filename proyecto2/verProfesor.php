@@ -14,14 +14,10 @@ include("conexion.php");
 	<title>RCA - ICO | Vista de profesores</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-	<style>
-		.content {
-			margin-top: 80px;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">

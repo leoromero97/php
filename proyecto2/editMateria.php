@@ -11,20 +11,16 @@ include("conexion.php");
 	<meta name="keywords" content="Sistema | Registro | Alumnos | Calificaciones">
   <meta name="author" content="Leonardo G. Romero - Nahuel Pastene - Matias Loviscovo - Leonardo Martínez">
 	<link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
-	<title>RCA - ICO | Datos de la materia</title>
+	<title>RCA - ICO | Editar materia</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-	<style>
-		.content {
-			margin-top: 80px;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -32,7 +28,7 @@ include("conexion.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h2>Datos de la Materia &raquo; Editar datos</h2>
+			<h1 class="titulo1">Datos de la Materia &raquo; Editar</h1>
 			<hr />
 			<?php
 			$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));

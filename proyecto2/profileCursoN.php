@@ -16,14 +16,11 @@ include("conexion.php");
 	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-	<style>
-		.content {
-			margin-top: 80px;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -31,7 +28,7 @@ include("conexion.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h2>Datos del curso</h2>
+			<h1 class="titulo1">Curso seleccionado</h1>
 			<hr />
 			<?php
 			$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));
@@ -52,7 +49,6 @@ include("conexion.php");
 				}
 			}
 			?>
-			
 			<table class="table table-striped table-condensed">
 				<tr>
 					<th width="20%">ID</th>
@@ -62,81 +58,74 @@ include("conexion.php");
 					<th>Curso</th>
 					<td><?php echo $row['curso']; ?></td>
 				</tr>
-			
-			
 			</table>
 			<div class="container">
-		<div class="content">
-			<h2>Alumnos</h2>
-			<hr />
-
-			<?php
-			if(isset($_GET['aksi']) == 'delete'){
-				// escaping, additionally removing everything that could be (html/javascript-) code
-				$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));
-				$cek = mysqli_query($con, "SELECT * FROM alumnos WHERE id='$id'");
-				if(mysqli_num_rows($cek) == 0){
-					echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
-				}else{
-					$delete = mysqli_query($con, "DELETE FROM alumnos WHERE id='$id'");
-					if($delete){
-						echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
-					}else{
-						echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
-					}
-				}
-			}
-			?>
-
-			<form class="form-inline" method="get">
-				<div class="form-group">
-					<input name="buscar" class="form-control" placeholder="Ingrese apellido del alumno">
-					<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
-					<input type="submit" class="btn btn-primary" value="Buscar">
-				</div>
-			</form>
-			<br />
-			<div class="table-responsive">
-			<table class="table table-striped table-hover">
-				<tr>
-                    <th>ID</th>
-					<th>Curso</th>
-					<th>Apellido</th>
-					<th>Nombre</th>
-                    <th>Dni</th>
-                    <th>Telefono</th>
-				</tr>
+				<h1 class="titulo1">Alumnos</h1>
+				<hr />
 				<?php
-				if($buscar){
-					$sql = mysqli_query($con, "SELECT * FROM alumnos WHERE apellido LIKE '%$buscar%' ORDER BY id ASC");
-				}else{
-					//$sql = mysqli_query($con, "select alumnos.*,cursos.* from alumnos,cursos where alumnos.idcurso = cursos.id");
-					$sql = mysqli_query($con, "SELECT * FROM alumnos where idcurso= $id ORDER BY id ASC");
-				}
-
-				if(mysqli_num_rows($sql) == 0){
-					echo '<tr><td colspan="8">No hay datos.</td></tr>';
-				}else{
-					$no = 1;
-					while($row = mysqli_fetch_assoc($sql)){
-						echo '
-						<tr>
-							<td><a href="profileNotaAlumnoN.php?id='.$row['id'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.$row['id'].'</a></td>
-							<td>'.$row['idcurso'].'</td>
-							<td>'.$row['apellido'].'</td>
-							<td>'.$row['nombre'].'</td>
-                            <td>'.$row['dni'].'</td>
-							<td>'.$row['telefono'].'</td>
-						</tr>';
-						$no++;
+				if(isset($_GET['aksi']) == 'delete'){
+					// escaping, additionally removing everything that could be (html/javascript-) code
+					$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));
+					$cek = mysqli_query($con, "SELECT * FROM alumnos WHERE id='$id'");
+					if(mysqli_num_rows($cek) == 0){
+						echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
+					}else{
+						$delete = mysqli_query($con, "DELETE FROM alumnos WHERE id='$id'");
+						if($delete){
+							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
+						}else{
+							echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
+						}
 					}
 				}
 				?>
-				
-			</table>
+				<form class="form-inline" method="get">
+					<div class="form-group">
+						<input name="buscar" class="form-control mb-20" placeholder="Ingrese apellido del alumno">
+						<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
+						<input type="submit" class="btn btn-primary mb-20" value="Buscar">
+					</div>
+				</form>
+				<br />
+				<div class="table-responsive">
+					<table class="table table-striped table-hover">
+						<tr>
+            	<th>ID</th>
+							<th>Curso</th>
+							<th>Apellido</th>
+							<th>Nombre</th>
+              <th>DNI</th>
+              <th>Teléfono</th>
+						</tr>
+						<?php
+						if($buscar){
+							$sql = mysqli_query($con, "SELECT * FROM alumnos WHERE apellido LIKE '%$buscar%' ORDER BY id ASC");
+						}else{
+							//$sql = mysqli_query($con, "select alumnos.*,cursos.* from alumnos,cursos where alumnos.idcurso = cursos.id");
+							$sql = mysqli_query($con, "SELECT * FROM alumnos where idcurso= $id ORDER BY id ASC");
+						}
+					
+						if(mysqli_num_rows($sql) == 0){
+							echo '<tr><td colspan="8">No hay datos.</td></tr>';
+						}else{
+							$no = 1;
+							while($row = mysqli_fetch_assoc($sql)){
+								echo '
+								<tr>
+									<td><a href="profileNotaAlumnoN.php?id='.$row['id'].'"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'.$row['id'].'</a></td>
+									<td>'.$row['idcurso'].'</td>
+									<td>'.$row['apellido'].'</td>
+									<td>'.$row['nombre'].'</td>
+        		 			<td>'.$row['dni'].'</td>
+									<td>'.$row['telefono'].'</td>
+								</tr>';
+								$no++;
+							}
+						}
+						?>
+					</table>
+				</div>
 			</div>
-		</div>
-	</div>
 			<a href="altaNotas.php" class="btn btn-secondary center">
 				<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
 				Volver

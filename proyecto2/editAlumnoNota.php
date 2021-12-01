@@ -11,7 +11,7 @@ include("conexion.php");
 	<meta name="keywords" content="Sistema | Registro | Alumnos | Calificaciones">
   <meta name="author" content="Leonardo G. Romero - Nahuel Pastene - Matias Loviscovo - Leonardo Martínez">
 	<link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
-	<title>RCA - ICO | Datos del alumno</title>
+	<title>RCA - ICO | Calificar</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
@@ -21,11 +21,6 @@ include("conexion.php");
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-	<style>
-		.content {
-			margin-top: 80px;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -33,8 +28,9 @@ include("conexion.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h2>Datos del alumno &raquo; Calificar</h2>
+			<h1 class="titulo1">Datos de la Materia &raquo; Calificar</h1>
 			<hr />
+			<p>Seleccione la materia para poder calificar</p>
 			<?php
 			$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));
 			$idcurso = mysqli_real_escape_string($con,(strip_tags($_GET["idcurso"],ENT_QUOTES)));
@@ -86,9 +82,9 @@ include("conexion.php");
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">Telefono</label>
+					<label class="col-sm-3 control-label">Teléfono</label>
 					<div class="col-sm-3">
-					<input type="text" name="telefono" value="<?php echo $row ['telefono']; ?>" class="form-control" placeholder="Telefono" disabled>
+					<input type="text" name="telefono" value="<?php echo $row ['telefono']; ?>" class="form-control" placeholder="Teléfono" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -99,7 +95,7 @@ include("conexion.php");
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">Materias</label>
+					<label class="col-sm-3 control-label">Materia</label>
 					<div class="col-sm-4">
 						<div class="content-select">
 							<select name = "materias" class="select">
@@ -119,9 +115,9 @@ include("conexion.php");
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">Notas</label>
+					<label class="col-sm-3 control-label">Nota</label>
 					<div class="col-sm-4">
-						<input type="text" name="nota" class="form-control" placeholder="Notas" required>
+						<input type="number" name="nota" class="form-control" placeholder="Nota" required>
 					</div>
 				</div>
 				<div class="form-group">
