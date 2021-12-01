@@ -31,43 +31,43 @@ include("conexion.php");
     </h2>
     <div class="dashboard_contenedor_cards">
       <a href="verAlumnos.php" class="card1 margen-inferior1">
-        <img src="./img/ic_usuario.png" alt="icono usuario" class="icono-card1">
+        <img src="./img/ic_users.svg" alt="Alumnos" class="icono-card1">
         <p class="texto-card1">Ver Alumnos</p>
       </a>
 			<a href="altaAlumno.php" class="card1 margen-inferior1">
-        <img src="./img/ic_usuario.png" alt="icono usuario" class="icono-card1">
+        <img src="./img/ic_agregar-user.svg" alt="Agregar alumno" class="icono-card1">
         <p class="texto-card1">Ingresar Alumno</p>
       </a>
 			<a href="verProfesor.php" class="card1 margen-inferior1">
-        <img src="./img/ic_usuario.png" alt="icono usuario" class="icono-card1">
+        <img src="./img/ic_users.svg" alt="Profesores" class="icono-card1">
         <p class="texto-card1">Ver Profesores</p>
       </a>
 			<a href="altaProfesor.php" class="card1 margen-inferior1">
-        <img src="./img/ic_usuario.png" alt="icono usuario" class="icono-card1">
+        <img src="./img/ic_agregar-user.svg" alt="Agregar usuario" class="icono-card1">
         <p class="texto-card1">Ingresar Profesor</p>
       </a>
       <a href="verCursos.php" class="card1 margen-inferior1">
-        <img src="./img/ic_cursos.png" alt="Cursos" class="icono-card1">
+        <img src="./img/ic_cursos.svg" alt="Cursos" class="icono-card1">
         <p class="texto-card1">Ver Cursos</p>
       </a>
 			<a href="altaCurso.php" class="card1 margen-inferior1">
-        <img src="./img/ic_cursos.png" alt="Cursos" class="icono-card1">
+        <img src="./img/ic_agregar-curso.svg" alt="Agregar curso" class="icono-card1">
         <p class="texto-card1">Ingresar Curso</p>
       </a>
       <a href="verMaterias.php" class="card1 margen-inferior1">
-        <img src="./img/ic_materia.png" alt="materia" class="icono-card1">
+        <img src="./img/ic_materias.svg" alt="Materias" class="icono-card1">
         <p class="texto-card1">Ver materias</p>
       </a>
 			<a href="altaMateria.php" class="card1 margen-inferior1">
-        <img src="./img/ic_materia.png" alt="materia" class="icono-card1">
+        <img src="./img/ic_agregar-materia.svg" alt="Agregar materia" class="icono-card1">
         <p class="texto-card1">Alta materia</p>
       </a>
 			<a href="verNotas.php" class="card1 margen-inferior1">
-        <img src="./img/ic_notas.png" alt="Notas" class="icono-card1">
+        <img src="./img/ic_notas.svg" alt="Notas" class="icono-card1">
         <p class="texto-card1">Ver Notas</p> 
       </a>
       <a href="altaNotas.php" class="card1 margen-inferior1">
-        <img src="./img/ic_notas.png" alt="Notas" class="icono-card1">
+        <img src="./img/ic_agregar-nota.svg" alt="Agregar notas" class="icono-card1">
         <p class="texto-card1">Altas Notas</p> 
       </a>
     </div>
