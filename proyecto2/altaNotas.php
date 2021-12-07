@@ -14,14 +14,11 @@ include("conexion.php");
 	<title>RCA - ICO | Alta de notas</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
+	<link href="css/margin.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-	<style>
-		.content {
-			margin-top: 80px;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -52,9 +49,9 @@ include("conexion.php");
 
 			<form class="form-inline" method="get">
 				<div class="form-group">
-					<input name="buscar" class="form-control" placeholder="Ingrese el nombre del curso">
+					<input name="buscar" class="form-control search mb-20" placeholder="Ingrese el nombre del curso">
 					<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
-					<input type="submit" class="btn btn-primary" value="Buscar">
+					<input type="submit" class="btn btn-primary mb-20" value="Buscar">
 				</div>
 			</form>
 			<br />

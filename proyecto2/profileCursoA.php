@@ -11,12 +11,13 @@ include("conexion.php");
 	<meta name="keywords" content="Sistema | Registro | Alumnos | Calificaciones">
   <meta name="author" content="Leonardo G. Romero - Nahuel Pastene - Matias Loviscovo - Leonardo Martínez">
 	<link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
-	<title>RCA - ICO | Datos del profesor</title>
+	<title>RCA - ICO | Datos del curso</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
 	<link href="css/components.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -27,12 +28,12 @@ include("conexion.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h1 class="titulo1">Datos del profesor seleccionado</h1>
+			<h1 class="titulo1">Curso seleccionado</h1>
 			<hr />
 			<?php
 			$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));
 			
-			$sql = mysqli_query($con, "SELECT * FROM profesores WHERE id='$id'");
+			$sql = mysqli_query($con, "SELECT * FROM cursos WHERE id='$id'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: dashboard.php");
 			}else{
@@ -40,7 +41,7 @@ include("conexion.php");
 			}
 			
 			if(isset($_GET['aksi']) == 'delete'){
-				$delete = mysqli_query($con, "DELETE FROM profesores WHERE id='$id'");
+				$delete = mysqli_query($con, "DELETE FROM cursos WHERE id='$id'");
 				if($delete){
 					echo '<div class="alert alert-danger alert-dismissable">><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Datos eliminados con éxito</div>';
 				}else{
@@ -48,45 +49,32 @@ include("conexion.php");
 				}
 			}
 			?>
-			
 			<table class="table table-striped table-condensed">
 				<tr>
 					<th width="20%">ID</th>
 					<td><?php echo $row['id']; ?></td>
 				</tr>
 				<tr>
-					<th>Apellido</th>
-					<td><?php echo $row['apellido']; ?></td>
-				</tr>
-				<tr>
-					<th>Nombre</th>
-					<td><?php echo $row['nombre']; ?></td>
-				</tr>
-				<tr>
-					<th>DNI</th>
-					<td><?php echo $row['dni']; ?></td>
-				</tr>
-				<tr>
-					<th>Teléfono</th>
-					<td><?php echo $row['telefono']; ?></td>
+					<th>Curso</th>
+					<td><?php echo $row['curso']; ?></td>
 				</tr>
 			</table>
 			
-			<a href="verProfesor.php" class="btn btn-secondary center">
-			<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
+			<a href="verCursos.php" class="btn btn-secondary center">
+				<img src="img/ic_arrow-left.svg" alt="Volver icono" class="mr-4" />
 				Volver
 			</a>
-			<a href="editProfesor.php?id=<?php echo $row['id']; ?>" class="btn btn-primary center">
+			<a href="editCurso.php?id=<?php echo $row['id']; ?>" class="btn btn-primary" center>
 				<img src="img/ic_edit.svg" alt="Editar icono" class="mr-4" />
 				Editar datos
 			</a>
-			<a href="profileProfesor.php?aksi=delete&id=<?php echo $row['id']; ?>" class="btn btn-danger center" onclick="return confirm('¿Estás seguro de borrar los datos de <?php echo $row['nombre']; ?> ?')">
+			<a href="profileCursoA.php?aksi=delete&id=<?php echo $row['id']; ?>" class="btn btn-danger center" onclick="return confirm('¿Estás seguro de borrar los datos de <?php echo $row['nombre']; ?> ?')">
 				<img src="img/ic_trash.svg" alt="Eliminar icono" class="mr-4" />
 				Eliminar
 			</a>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -16,14 +16,10 @@ include("conexion.php");
 	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/margins.css" rel="stylesheet">
 	<link href="css/aligns.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-	<style>
-		.content {
-			margin-top: 80px;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -31,7 +27,7 @@ include("conexion.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h2>Datos de la materia &raquo; Editar</h2>
+			<h1 class="titulo1">Datos de la materia</h1>
 			<hr />
 			<?php
 			$id = mysqli_real_escape_string($con,(strip_tags($_GET["id"],ENT_QUOTES)));

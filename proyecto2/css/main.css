@@ -140,7 +140,7 @@ html {
 
 @media screen and (min-width: 678px) {
   .titulo1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .texto {
@@ -185,7 +185,7 @@ html {
 
 @media screen and (min-width: 990px) {
   .titulo1 {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 
   .texto-card1 {

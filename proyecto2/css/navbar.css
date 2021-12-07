@@ -94,6 +94,7 @@
 }
 
 .dropdown-item:hover {
+  color: #E7F5FF;
   background: #04498F;
 }
 
