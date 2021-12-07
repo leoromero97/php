@@ -15,6 +15,7 @@ include("conexion.php");
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
 	<link href="css/components.css" rel="stylesheet">
+	<link href="css/margins.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -27,7 +28,6 @@ include("conexion.php");
 		<div class="content">
 			<h1 class="titulo1">Profesores</h1>
 			<hr />
-
 			<?php
 			if(isset($_GET['aksi']) == 'delete'){
 				// escaping, additionally removing everything that could be (html/javascript-) code
@@ -45,23 +45,22 @@ include("conexion.php");
 				}
 			}
 			?>
-
 			<form class="form-inline" method="get">
 				<div class="form-group">
-					<input name="buscar" class="form-control" placeholder="Ingrese apellido del profesor">
+					<input name="buscar" class="form-control search mb-20" placeholder="Ingrese apellido del profesor">
 					<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
-					<input type="submit" class="btn btn-primary" value="Buscar">
+					<input type="submit" class="btn btn-primary mb-20" value="Buscar">
 				</div>
 			</form>
 			<br />
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
 				<tr>
-                    <th>ID</th>
+					<th>ID</th>
 					<th>Apellido</th>
 					<th>Nombre</th>
-                    <th>Dni</th>
-                    <th>Telefono</th>
+          <th>DNI</th>
+					<th>Teléfono</th>
 				</tr>
 				<?php
 				if($buscar){

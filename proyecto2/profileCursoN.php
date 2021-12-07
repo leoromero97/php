@@ -81,7 +81,7 @@ include("conexion.php");
 				?>
 				<form class="form-inline" method="get">
 					<div class="form-group">
-						<input name="buscar" class="form-control mb-20" placeholder="Ingrese apellido del alumno">
+						<input name="buscar" class="form-control search mb-20" placeholder="Ingrese apellido del alumno">
 						<?php $buscar = (isset($_GET['buscar']) ? strtolower($_GET['buscar']) : NULL); ?>
 						<input type="submit" class="btn btn-primary mb-20" value="Buscar">
 					</div>

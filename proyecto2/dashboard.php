@@ -72,6 +72,38 @@ include("conexion.php");
       </a>
     </div>
   </div>
+  <footer class="footer">
+    <div class="container-footer">
+    <div class="content-footer">
+      <h4 class="title-footer">Nuestra web</h4>
+      <a href="https://cristoobrero.com.ar/" target="blank" rel="noopener noreferrer" class="link-external-footer">
+        <img src="./img/ic_arrow-up-right.svg" alt="external link icon" class="icon-footer" />
+        Instituto Cristo Obrero
+      </a>
+    </div>
+    <div class="content-footer">
+      <h4 class="title-footer">Seguinos</h4>
+      <a href="https://www.instagram.com/cristoobrerosoldati/" target="blank" rel="noopener noreferrer" class="link-external-footer">
+        <img src="./img/ic_arrow-up-right.svg" alt="external link icon" class="icon-footer" />
+        Instagram
+      </a>
+      <a href="https://www.instagram.com/terciario.cristoobrero/" target="blank" rel="noopener noreferrer" class="link-external-footer">
+       <img src="./img/ic_arrow-up-right.svg" alt="external link icon" class="icon-footer" />
+        Instagram Terciario
+      </a>
+    </div>
+    <div class="content-footer">
+      <h4 class="title-footer">Sobre nosotros</h4>
+      <p class="text-footer">Instituo Cristo Obrero es una comunidad dedicada a la ayuda y la educación de los más necesitados</p>
+      <a href="https://goo.gl/maps/qg5f6yKhKitcupGv6" target="blank" rel="noopener noreferrer" class="link-external-footer">
+        <img src="./img/ic_map.svg" alt="external link icon" class="icon-footer" />
+        Avenida Lafuente 3228, Villa Soldati, CABA
+      </a> 
+    </div>
+    </div>
+    <p class="description-footer">Desarrollado por Leonardo Romero | Nahuel Pastene | Matias Loviscovo | Leonardo Martínez</p>
+    <p class="description-footer">Copyright 2021 &#169; Instituto Cristo Obrero</p>
+  </footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
