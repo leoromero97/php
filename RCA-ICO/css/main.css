@@ -1,0 +1,243 @@
+@import './normalizer.css';
+@import './login.css';
+@import './welcome.css';
+@import './dashboard.css';
+@import './botones.css';
+
+body,
+html {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  color: #040509;
+  font-size: 62.5%; /* 10px = 1rem*/
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/*A partir de esta linea van a ver los valores estandar que vamos a utilizar en el sistema, cosa de tenerlos a mano y no utilizar otros colores*/
+:root {
+  /* COLORES */
+  --blue: #0F0A83;
+  --blue2: #04498F;
+  --blueDark: #040509;
+  --blue-white: #E7F5FF;
+  --blue-shadow: #044A8F33;
+  --red: #F51A4B;
+  --white: #FFFFFF;
+  --yellow: #FEFD03;
+  --gray: #747474;
+}
+
+.icono-ico-grande {
+  height: 5.6rem;
+  margin-bottom: 1.8rem;
+  width: 4.4rem;
+}
+
+/* FUENTES */
+.titulo1 {
+  color: #0F0A83;
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.texto {
+  color: #747474;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+
+.subtitulo1 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.icono-card1,
+.icono-boton-chico {
+  height: 1.5rem;
+  margin-right: 0.8rem;
+  width: 1.5rem;
+}
+
+.texto-card1 {
+  color: #04498F;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.card1 {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 12rem;
+  height: 5rem;
+  background-color: #E7F5FF;
+  border-radius: 12px;
+  box-shadow: 0 0.2rem 0.2rem #044A8F33;
+  transition: all .3s ease-out;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.buscador_contenedor {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buscador {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  color: #04498F;
+  padding: 0.5rem;
+  width: 80%;
+  font-size: 0.6rem;
+}
+
+.buscador_boton {
+  align-items: center;
+  padding: 0.5rem 0.2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #04498F;
+  border-radius: 12px;
+  color: #FFFFFF;
+}
+
+.disabled {
+  opacity: 0.3;
+}
+
+.margen-inferior1 {
+  margin-bottom: 1rem;
+}
+
+.margen-inferior2 {
+  margin-bottom: 2rem;
+}
+
+.margen-inferior4 {
+  margin-bottom: 4rem;
+}
+
+.contenedor_error {
+  align-items: center;
+  background: linear-gradient(#E7F5FF, #FFFFFF);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 2rem 0.5rem;
+  width: 100%;
+}
+
+/* .line-1 {
+  border-right: 2px solid #0F0A83;
+  text-align: center;
+  overflow: hidden; 
+  max-height: 2rem;
+}
+
+.anim-typewriter{
+animation: typewriter 4s steps(44) 1s 1 normal both,
+           blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 100%;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+} */
+
+@media screen and (min-width: 678px) {
+  .titulo1 {
+    font-size: 1.5rem;
+  }
+
+  .texto {
+    font-size: 0.8rem;
+  }
+
+  .icono-card1 {
+    margin-bottom: 1.6rem;
+    margin-right: 0rem;
+  }
+  
+  .card1 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 1rem;
+    justify-content: flex-start;
+    padding: 1.5rem 1rem 2rem 0.8rem;
+    width: 6rem;
+    height: 7.2rem;
+  }
+
+  .card1:hover {
+    border: 1px solid #0F0A83;
+    box-shadow: 0 0.3rem 0.2rem #044A8F33;
+  }
+
+  .buscador_contenedor {
+    width: 60%;
+  }
+  
+  .buscador {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .buscador_boton {
+    font-size: 0.8rem;
+    padding: 0.8rem 0.4rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .titulo1 {
+    font-size: 2.2rem;
+  }
+
+  .texto-card1 {
+    font-size: 0.9rem;
+  }
+
+  .card1 {
+    margin-right: 1.6rem;
+    padding-top: 2.5rem;
+    justify-content: space-between;
+    width: 8rem;
+    height: 10rem;
+  }
+}
+
+  /* MEDIDAS PARA MEDIA QUERYS */
+
+  /*  MOBILE 
+  @media screen and (min-width: 496px) {
+    
+  }
+  */
+
+
+  /*  TABLET 
+  @media screen and (min-width: 678px) {
+    
+  }
+  */
+
+  /* PC 
+  @media screen and (min-width: 990px) {
+    
+  }
+  */
