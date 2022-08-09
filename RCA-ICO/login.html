@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Registro de Calificaciones de Alumnos - ICO">
+  <meta name="keywords" content="Sistema | Registro | Alumnos | Calificaciones">
+  <meta name="author" content="Leonardo G. Romero ">
+  <meta property="og:type" content="Website">
+  <meta content="modificar con el link" property="og:url">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+  <title>RCA - ICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login_contenedor_padre">
+  <div class="login_contenedor">
+      <h1 class="titulo1 login_titulo">Ingresá con usuario y contraseña</h1>
+      <div class="login_contenedor_formulario">
+        <form class="formulario">
+        <!-- <form action="../php/login.php" method="post" class="formulario"> -->
+          <div class="formulario-grupo">
+            <input name="usuario" type="text" class="input" required>
+            <span class="linea-input"></span>
+            <label for="usuario" class="label">Usuario</label>
+           </div>
+           <div class="formulario-grupo">
+             <input name="contrasena" type="password" class="input" maxlength="10" minlength="4" required>
+             <span class="linea-input"></span>
+             <label for="contrasena" class="label">Contraseña</label>
+           </div>
+          <a href="dashboard.php" class="boton-primario">Iniciar sesión</a>
+        </form>
+    </div>
+  </div>
+  <div class="contenedor-footer">
+    <p class="mensaje-footer">¿Todavía no te registraste? No esperes más</p>
+    <a href="#" class="boton-secundario">Registrarme</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+.login_contenedor_padre {
+  background: linear-gradient(to Top, #040509, hsla(0, 0%, 100%, 0.301)), url("/img/fondo-ico.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0;
+  padding: 2rem 0.4rem;
+  width: 100%;
+}
+
+.login_contenedor {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#E7F5FF, #FFFFFF);
+  border-radius: 12px;
+  box-shadow: 0 0.1rem 0.2rem #044A8F33;
+  padding: 2rem 0;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.login_contenedor_formulario {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.login_titulo {
+  margin-bottom: 1.8rem;
+}
+
+.formulario {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.formulario-grupo {
+  margin: 2rem 1rem;
+  position: relative;
+}
+
+.formulario-grupo:nth-child(2) {
+  margin: 2rem 1rem 6rem;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #040509;
+  color: #040509;
+  display: block;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 1rem 1rem 1rem 0.5rem;
+  width: 100%;
+}
+
+.input:focus {
+  color: #23374d;
+}
+
+.label {
+  color: #0F0A83;
+  font-size: 0.8rem;
+  left: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  top: -1rem;
+  transition: 0.3s ease-in-out all;
+}
+
+.input:focus ~ .label {
+  color: #04498F;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.linea-input {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.linea-input::before {
+  background: #04498F;
+  bottom: 0;
+  content: '';
+  height: 0.1rem;
+  left: 0;
+  position: absolute;
+  transition: 0.3s ease width;
+  width: 0%;
+}
+
+.input:focus ~ .linea-input::before {
+  width: 100%;
+}
+
+.contenedor-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mensaje-footer {
+  font-size: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #E7F5FF;
+}
+
+@media screen and (min-width: 496px) {
+  .login_contenedor_padre {
+    padding: 2rem 2rem;
+  }
+
+  .login_contenedor {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .login_contenedor {
+    max-width: 740px;
+  }
+
+  .login_titulo {
+    margin-bottom: 6rem;
+    max-width: 500px;
+  }
+
+  .mensaje-footer {
+    font-size: 0.7rem;
+  }
+}
